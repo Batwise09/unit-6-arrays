@@ -2,10 +2,10 @@ package Lesson2_PrintOdds;
 
 
 /**
- * Write a description of class Main here.
+ * Prints values on odd araay indices
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/20/26
  */
 public class Main
 {
@@ -22,5 +22,12 @@ public class Main
     public static void printOddIndices(int[] arr)
     {
         // your code goes here!
+        for (int i = 0; i < arr.length; i++)
+        {
+            if (i % 2 == 0)
+            {
+                System.out.println(arr[i]);
+            }
+        }
     }
 }
