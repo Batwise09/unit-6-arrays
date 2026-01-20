@@ -16,7 +16,7 @@ public class Main
         final int MAX_TO_GENERATE = 15;
     
         // create the array to hold the sequence of Fibonacci numbers
-    
+        int[] numbers = new int[MAX_TO_GENERATE];
     
         //create the first 2 Fibonacci sequence elements
 

@@ -2,10 +2,10 @@ package Lesson2_FindIndexOfString;
 
 
 /**
- * Write a description of class MatchingString here.
+ * Returns the first index of a String. If it doesn't exist, it will return -1.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/20/26
  */
 public class MatchingString
 {
@@ -14,6 +14,13 @@ public class MatchingString
     public static int findString(String myString)
     {
         // your code goes here!
+        for (int i = 0; i < arr.length; i++)
+        {
+            if (arr[i].equals(myString))
+            {
+                return i;
+            }
+        }
         return -1;
     }
 }
