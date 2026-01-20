@@ -2,10 +2,10 @@ package Lesson2_PrintArray;
 
 
 /**
- * Write a description of class Main here.
+ * Prints each entry in order of arrays and displays index value
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/20/26
  */
 public class Main
 {
@@ -23,6 +23,9 @@ public class Main
     public static void printArr(String[] arr)
     {
         // Print everything in the array on its own line
-        
+        for (int i = 0; i < arr.length; i++)
+        {
+            System.out.println(i + ". " + arr[i]);
+        }
     }
 }
