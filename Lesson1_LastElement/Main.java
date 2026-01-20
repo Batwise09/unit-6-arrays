@@ -2,10 +2,10 @@ package Lesson1_LastElement;
 
 
 /**
- * Write a description of class Main here.
+ * Prints the last element of the test data
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/20/26
  */
 public class Main
 {
@@ -14,12 +14,12 @@ public class Main
         // TEST DATA. DO NOT CHANGE
         double[] unitCircle = {0, 1.57, 3.14, 6.28, 7.85};
         
-        //get and print the last element of the array
+        System.out.println(getLastElement(unitCircle));
     }
 
     public static double getLastElement(double[] arr)
     {
         // Your code goes here!
-        return -1;
+        return arr[arr.length - 1];
     }
 }
