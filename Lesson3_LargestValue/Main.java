@@ -4,8 +4,8 @@ package Lesson3_LargestValue;
 /**
  * Write a description of class Main here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/22/26
  */
 public class Main
 {
@@ -24,11 +24,11 @@ public class Main
         int maxSoFar = numbers[0];
         
         // for each loop to rewrite as for loop 
-        for (int num: numbers)  
+        for (int i = 0; i < numbers.length; i++)  
         { 
-            if (num > maxSoFar) 
+            if (numbers[i] > maxSoFar) 
             { 
-                maxSoFar = num; 
+                maxSoFar = numbers[i];
             } 
         } 
         
