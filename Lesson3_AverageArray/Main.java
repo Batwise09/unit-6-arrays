@@ -2,16 +2,23 @@ package Lesson3_AverageArray;
 
 
 /**
- * Write a description of class Main here.
+ * I have created an array of integers and shall get the average using the ArrayAverage class.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/22/26
  */
 public class Main
 {
-   public static void main(String[] args)
-   {    
-     // Create an ArrayAverage object and print the result 
-     
-   }
+    public static void main(String[] args)
+    {    
+        int[] numbers = {16, 82, 47, 35, 73};
+        for (int num : numbers)
+        {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        // Create an ArrayAverage object and print the result 
+        ArrayAverage avg = new ArrayAverage(numbers);
+        System.out.print("The average is: " + avg.findAverage());
+    }
 }
