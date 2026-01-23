@@ -2,10 +2,10 @@ package Lesson4_FindTheLastMultiple;
 
 
 /**
- * Write a description of class Main here.
+ * Prints the last multiple of 3 in the array.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/23/26
  */
 public class Main
 {
@@ -18,7 +18,14 @@ public class Main
     
     public static int findMultipleOfThree(int[] arr)
     {
-        // your code goes here! 
-        return -1;
+        int multiple = -1;
+        for (int num : arr)
+        {
+            if (num % 3 == 0)
+            {
+                multiple = num;
+            }
+        }
+        return multiple;
     }
 }
