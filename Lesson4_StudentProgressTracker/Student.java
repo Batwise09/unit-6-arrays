@@ -9,14 +9,13 @@ package Lesson4_StudentProgressTracker;
  */
 public class Student
 {
-    String firstName;
-    String lastName;
-    int gradeLevel;
-    double gpa;
-    int[] exams;
-    int numExamsTaken = 0;
-    final int NUM_EXAMS = 4;
-    
+    private String firstName;
+    private String lastName;
+    private int gradeLevel;
+    private double gpa;
+    private int[] exams;
+    private int numExamsTaken = 0;
+    private final int NUM_EXAMS = 4;
     
     public Student(String firstName, String lastName, int gradeLevel)
     {
@@ -25,6 +24,12 @@ public class Student
         this.gradeLevel = gradeLevel;
         
         exams = new int[NUM_EXAMS];
+        
+        //Make "null" values -1
+        for (int i = 1; i < exams.length; i++)
+        {
+            exams[i] = -1;
+        }
     }
     
     public int getExamImprovement()
@@ -32,7 +37,10 @@ public class Student
         int improvement = 0;
         for (int i = 1; i < exams.length; i++)
         {
-            improvement += exams[i] - exams[i - 1];
+            if (exams[i] != -1)
+            {
+                improvement += exams[i] - exams[i - 1];
+            }
         }
         return improvement;
     }
@@ -44,6 +52,17 @@ public class Student
     
     public void addExamScore(int score)
     {
-        
+        exams[numExamsTaken] = score;
+        numExamsTaken++;
+    }
+    
+    public void setGPA(double gpa)
+    {
+        this.gpa = gpa;
+    }
+    
+    public String toString()
+    {
+        return this.getName() + " is in grade: " + gradeLevel;
     }
 }

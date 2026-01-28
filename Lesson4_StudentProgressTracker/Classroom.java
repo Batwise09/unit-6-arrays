@@ -4,32 +4,49 @@ package Lesson4_StudentProgressTracker;
 /**
  * Write a description of class Classroom here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author - Samwise Shurtleff
+ * @version - 1/28/26
  */
 public class Classroom
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Classroom
-     */
-    public Classroom()
+    private Student[] students;
+    private int numStudentsAdded;
+    public Classroom(int numStudents)
     {
-        // initialise instance variables
-        x = 0;
+        students = new Student[numStudents];
+        numStudentsAdded = 0;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public Student getMostImprovedStudent()
     {
-        // put your code here
-        return x + y;
+        Student mostImproved = students[0];
+        for (Student pupil : students)
+        {
+            if (pupil != null)
+            {
+                if (pupil.getExamImprovement() > mostImproved.getExamImprovement())
+                {
+                    mostImproved = pupil;
+                }
+            }
+        }
+        return mostImproved;
+    }
+    
+    public void addStudent(Student pupil)
+    {
+        students[numStudentsAdded] = pupil;
+        numStudentsAdded++;
+    }
+    
+    public void printStudents()
+    {
+        for (Student pupil : students)
+        {
+            if (pupil != null)
+            {
+                System.out.println(pupil);
+            }
+        }
     }
 }
